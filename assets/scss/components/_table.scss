@@ -1,0 +1,37 @@
+/* Styling for tables */
+/* Styling for the train table */
+
+table {
+  text-align: left;
+  background-color: #fff;  
+  border: 2px solid $tertiary-color;
+  @include border-bottom-left-radius($border-rad);
+  @include border-bottom-right-radius($border-rad);
+
+  caption {
+    display: table-caption;
+    border: 2px solid $tertiary-color;
+    @include border-top-left-radius($border-rad);
+    @include border-top-right-radius($border-rad);
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $heading-font;
+    text-align: center;
+  }
+
+  tr {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    font-family: $heading-font;
+    background: $primary-color;
+    color: $light-color;
+  }
+}
+

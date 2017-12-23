@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto');
 @import './vendors/normalize';
 @import './base/variables';
+@import './base/mixins';
 @import './base/typography';
+@import './components/table';

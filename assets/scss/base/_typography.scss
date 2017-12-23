@@ -1,10 +1,12 @@
 * {
   font-size: 16px;
+  font-family: $body-font;
   color: $body-color;
 }
 
 h1, h2, h3 {
   color: $heading-color;
+  font-family: $heading-font;
 }
 
 h1 {
