@@ -382,6 +382,15 @@ h3 {
 small {
   font-size: .75rem; }
 
+/* Styling for header */
+header {
+  background-color: #009688;
+  margin: 0 0 2vh 0;
+  width: 100%;
+  padding: 2vh; }
+  header h1 {
+    color: rgba(255, 255, 255, 0.95); }
+
 /* Styling for tables */
 /* Styling for the train table */
 table {
