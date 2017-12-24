@@ -364,10 +364,10 @@ th {
 * {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: #444; }
+  color: rgba(0, 0, 0, 0.77); }
 
 h1, h2, h3 {
-  color: #222;
+  color: rgba(0, 0, 0, 0.95);
   font-family: "Open Sans", sans-serif; }
 
 h1 {
@@ -407,7 +407,7 @@ table {
     -ms-border-top-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #00675b;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.95);
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 1.778rem; }
@@ -421,7 +421,7 @@ table {
   table th {
     font-family: "Open Sans", sans-serif;
     background-color: #009688;
-    color: #eee; }
+    color: rgba(255, 255, 255, 0.84); }
   table button {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -430,7 +430,7 @@ table {
     border: 0;
     padding: 5px 10px;
     background-color: #ff867f;
-    color: #444;
+    color: rgba(0, 0, 0, 0.77);
     font-family: "Open Sans", sans-serif; }
 
 /*# sourceMappingURL=main.css.map */
