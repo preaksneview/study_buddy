@@ -2,8 +2,9 @@
 /* Styling for the train table */
 
 table {
+  table-layout: fixed;
   text-align: left;
-  border: 2px solid;
+  // border: 1px solid $primary-light;
   @include border-bottom-left-radius($border-rad);
   @include border-bottom-right-radius($border-rad);
 
@@ -23,19 +24,32 @@ table {
     width: 100%;
   }
 
-  tr:nth-child(odd  ) {
+  tr:nth-child(odd) {
     background-color: $primary-light;
   }
 
+  // tr:last-child {
+  //   border-bottom: 1px solid $primary-light;
+  // }
+
   th, td {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    height: 45px;
   }
 
   th {
     font-family: $heading-font;
     background-color: $primary-color;
     color: $body-light;
+  }
+
+  button {
+    @include border-radius($border-rad);
+    border: 0;
+    padding: 5px 10px;
+    background-color: $secondary-light;
+    color: $body-dark;
+    font-family: $heading-font;
   }
 }
 
