@@ -3,24 +3,31 @@
 
 table {
   text-align: left;
-  background-color: #fff;  
   border: 2px solid $tertiary-color;
   @include border-bottom-left-radius($border-rad);
   @include border-bottom-right-radius($border-rad);
 
   caption {
     display: table-caption;
-    border: 2px solid $tertiary-color;
+    border: 0;
     @include border-top-left-radius($border-rad);
     @include border-top-right-radius($border-rad);
-    background-color: $primary-color;
-    color: $secondary-color;
+    color: #fff;
     font-family: $heading-font;
     text-align: center;
+    font-size: 1.778rem;
   }
 
   tr {
     width: 100%;
+  }
+
+  tr:nth-child(even) {
+
+  }
+
+  tr:nth-child(odd) {
+
   }
 
   th, td {
@@ -30,8 +37,6 @@ table {
 
   th {
     font-family: $heading-font;
-    background: $primary-color;
-    color: $light-color;
   }
 }
 
