@@ -361,6 +361,31 @@ th {
 * {
   box-sizing: border-box; }
 
+/* Layout for mobile view */
+body {
+  display: flex;
+  flex-flow: column wrap; }
+
+section, table, aside, iframe {
+  width: 100%; }
+
+section {
+  margin: 0 0 2vh 0;
+  border-bottom: 1px solid #00675b;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0; }
+
+aside {
+  margin: 0 0 2vh 0;
+  border-top: 1px solid #c50e29;
+  border-bottom: 1px solid #c50e29; }
+
+#directions-section {
+  display: none; }
+
 * {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -394,7 +419,6 @@ header {
 /* Styling for tables */
 /* Styling for the train table */
 table {
-  table-layout: fixed;
   text-align: left;
   -webkit-border-bottom-left-radius: 5px;
   -moz-border-bottom-left-radius: 5px;
@@ -407,6 +431,7 @@ table {
   table caption {
     display: table-caption;
     border: 0;
+    padding: 5px;
     -webkit-border-top-left-radius: 5px;
     -moz-border-top-left-radius: 5px;
     -ms-border-top-left-radius: 5px;
@@ -425,7 +450,7 @@ table {
   table tr:nth-child(odd) {
     background-color: #52c7b8; }
   table th, table td {
-    padding: 10px;
+    padding: 2vw;
     height: 45px; }
   table th {
     font-family: "Open Sans", sans-serif;
@@ -445,7 +470,7 @@ table {
 /* Styling for footer */
 footer {
   width: 100%;
-  margin: 2vh 0 0 0;
+  margin: 0;
   background-color: #00675b;
   color: rgba(255, 255, 255, 0.84);
   text-align: center;

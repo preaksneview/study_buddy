@@ -2,7 +2,6 @@
 /* Styling for the train table */
 
 table {
-  table-layout: fixed;
   text-align: left;
   // border: 1px solid $primary-light;
   @include border-bottom-left-radius($border-rad);
@@ -11,6 +10,7 @@ table {
   caption {
     display: table-caption;
     border: 0;
+    padding: 5px;
     @include border-top-left-radius($border-rad);
     @include border-top-right-radius($border-rad);
     background-color: $primary-dark;
@@ -33,7 +33,7 @@ table {
   // }
 
   th, td {
-    padding: 10px;
+    padding: 2vw;
     height: 45px;
   }
 

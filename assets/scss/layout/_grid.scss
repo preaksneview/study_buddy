@@ -2,3 +2,32 @@
 * {
   box-sizing: border-box;
 }
+
+/* Layout for mobile view */
+body {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+section, table, aside, iframe {
+  width: 100%;
+}
+
+section {
+  margin: 0 0 2vh 0;
+  // border-top: 1px solid $primary-dark;
+  border-bottom: 1px solid $primary-dark;
+  @include border-radius($border-rad);
+  padding: 0;
+}
+
+aside {
+  margin: 0 0 2vh 0;
+  border-top: 1px solid $secondary-dark;
+  border-bottom: 1px solid $secondary-dark;
+  // @include border-radius($border-rad);
+}
+
+#directions-section {
+  display: none;
+}
