@@ -442,4 +442,13 @@ table {
     color: rgba(0, 0, 0, 0.77);
     font-family: "Open Sans", sans-serif; }
 
+/* Styling for footer */
+footer {
+  width: 100%;
+  margin: 2vh 0 0 0;
+  background-color: #00675b;
+  color: rgba(255, 255, 255, 0.84);
+  text-align: center;
+  padding: 2vh; }
+
 /*# sourceMappingURL=main.css.map */
