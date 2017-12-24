@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -382,7 +382,7 @@ small {
 /* Styling for the train table */
 table {
   text-align: left;
-  border: 2px solid #C6785E;
+  border: 2px solid;
   -webkit-border-bottom-left-radius: 5px;
   -moz-border-bottom-left-radius: 5px;
   -ms-border-bottom-left-radius: 5px;
@@ -402,24 +402,21 @@ table {
     -moz-border-top-right-radius: 5px;
     -ms-border-top-right-radius: 5px;
     border-top-right-radius: 5px;
-    color: #527A71;
+    background-color: #00675b;
+    color: #fff;
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 1.778rem; }
   table tr {
     width: 100%; }
-  table tr:nth-child(even) {
-    background: #B7EDE0;
-    color: #527A71; }
   table tr:nth-child(odd) {
-    background: #527A71;
-    color: #B7EDE0; }
+    background-color: #52c7b8; }
   table th, table td {
     padding: 10px;
     border-bottom: 1px solid #ddd; }
   table th {
     font-family: "Open Sans", sans-serif;
-    background: #527A71;
-    color: #B7EDE0; }
+    background-color: #009688;
+    color: #eee; }
 
 /*# sourceMappingURL=main.css.map */
