@@ -495,8 +495,30 @@ main {
 
 /* Styling of floating card */
 .card {
+  display: none;
+  width: 100%;
   margin: 1vh;
-  border: solid 1px rgba(0, 0, 0, 0.77); }
+  border: solid 1px rgba(0, 0, 0, 0.77);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  padding: 1vh;
+  line-height: 2rem; }
+
+input {
+  border: 1px solid rgba(0, 0, 0, 0.77);
+  border-radius: 5px; }
+
+#add-event {
+  background-color: #ff5252;
+  border-radius: 5px;
+  margin: 1vh 0;
+  border: 0;
+  padding: 5px 10px;
+  height: 3rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.84); }
 
 /* Styling for footer */
 footer {
