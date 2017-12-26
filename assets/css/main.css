@@ -445,6 +445,8 @@ table {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 1.778rem; }
+  table #add-new {
+    background-color: #ff867f; }
   table tr {
     width: 100%; }
   table tr:nth-child(odd) {
@@ -466,6 +468,29 @@ table {
     background-color: #ff867f;
     color: rgba(0, 0, 0, 0.77);
     font-family: "Open Sans", sans-serif; }
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  main #add-new {
+    display: inline-block;
+    background-color: #ff5252;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    margin: 1vh;
+    border: 0;
+    padding: 5px 10px;
+    height: 3rem;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.778rem;
+    color: rgba(255, 255, 255, 0.84);
+    text-transform: uppercase; }
+  main #add-new:hover {
+    box-shadow: 0 3px 4px 4px rgba(0, 0, 0, 0.33); }
 
 /* Styling for footer */
 footer {

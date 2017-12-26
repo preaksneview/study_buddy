@@ -1,6 +1,5 @@
 /* Styling for tables */
 /* Styling for the train table */
-
 table {
   text-align: left;
   // border: 1px solid $primary-light;
@@ -18,6 +17,10 @@ table {
     font-family: $heading-font;
     text-align: center;
     font-size: 1.778rem;
+  }
+
+  #add-new {
+   background-color: $secondary-light; 
   }
 
   tr {
@@ -50,5 +53,31 @@ table {
     background-color: $secondary-light;
     color: $body-dark;
     font-family: $heading-font;
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  #add-new {
+    display: inline-block;
+    // z-index: 2;
+    background-color: $secondary-color;
+    @include border-radius($border-rad);
+    margin: 1vh;
+    border: 0;
+    padding: 5px 10px;
+    height: 3rem;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.778rem;
+    color: $body-light;
+    text-transform: uppercase;
+  }
+
+  #add-new:hover {
+    box-shadow: 0 3px 4px 4px rgba(0,0,0,0.33);
   }
 }
