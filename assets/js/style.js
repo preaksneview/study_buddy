@@ -2,6 +2,12 @@
  * Styling and animation for StudyBuddy
  */
 
+// Click expand
+$(".expander").on("click", function() {
+  // event.stopPropagation();
+  $(this).closest('tr').next('tr').css('display','table-row');
+});
+
 // Click CREATE NEW MEETING
 $("#add-new").on("click", function() {
   // Show the form
