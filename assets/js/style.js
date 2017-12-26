@@ -4,8 +4,24 @@
 
 // Click expand
 $(".expander").on("click", function() {
-  // event.stopPropagation();
-  $(this).closest('tr').next('tr').css('display','table-row');
+  event.stopPropagation();
+  if ($(this).closest('tr').next('tr').css('display') === 'none') {
+    $(this).closest('tr')
+      .next('tr')
+      .css({
+        'display': 'table-row',
+        'opacity': 0,
+      })
+      .animate({opacity: 1}, 500);
+  }
+  else {
+    $(this).closest('tr')
+    .next('tr')
+    .animate({opacity: 0}, 500, function() {
+      $(this).css('display','none');
+    });
+  }
+
 });
 
 // Click CREATE NEW MEETING
