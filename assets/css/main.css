@@ -492,6 +492,7 @@ main {
   main #add-new:hover {
     box-shadow: 0 3px 4px 4px rgba(0, 0, 0, 0.33); }
 
+/* Styling of floating card */
 /* Styling for footer */
 footer {
   width: 100%;
