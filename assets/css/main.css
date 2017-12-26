@@ -449,7 +449,8 @@ table {
     background-color: #ff867f; }
   table tr {
     width: 100%; }
-  table tr:nth-child(odd) {
+  table .event-description {
+    display: none;
     background-color: #52c7b8; }
   table th, table td {
     padding: 2vw;
@@ -469,6 +470,7 @@ table {
     color: rgba(0, 0, 0, 0.77);
     font-family: "Open Sans", sans-serif; }
 
+/* Styling for form */
 main {
   display: flex;
   flex-flow: row wrap;
