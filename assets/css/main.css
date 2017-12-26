@@ -379,6 +379,7 @@ section {
   padding: 0; }
 
 aside {
+  order: 3;
   margin: 0 0 2vh 0;
   border-top: 1px solid #c50e29;
   border-bottom: 1px solid #c50e29; }
@@ -493,6 +494,10 @@ main {
     box-shadow: 0 3px 4px 4px rgba(0, 0, 0, 0.33); }
 
 /* Styling of floating card */
+.card {
+  margin: 1vh;
+  border: solid 1px rgba(0, 0, 0, 0.77); }
+
 /* Styling for footer */
 footer {
   width: 100%;
