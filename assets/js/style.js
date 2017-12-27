@@ -2,27 +2,7 @@
  * Styling and animation for StudyBuddy
  */
 
-// Click expand
-// $(".expander").on("click", function() {
-//   event.stopPropagation();
-//   if ($(this).closest('tr').next('tr').css('display') === 'none') {
-//     $(this).closest('tr')
-//       .next('tr')
-//       .css({
-//         'display': 'table-row',
-//         'opacity': 0,
-//       })
-//       .animate({opacity: 1}, 500);
-//   }
-//   else {
-//     $(this).closest('tr')
-//     .next('tr')
-//     .animate({opacity: 0}, 500, function() {
-//       $(this).css('display','none');
-//     });
-//   }
-// });
-
+// We need dummy data
 const database = {
   row1Data: {
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
@@ -47,49 +27,38 @@ const database = {
 }
 
 $(".expander").on("click", function() {
-  if ($(this).closest('tr').next('tr').val('class').is('.schedule')) {
+  if ($(this).closest('tr').next('tr').val('class').is('.description')) {
+    let rowId = $(this).closest('tr').attr('id');
+    let rowNum = parseInt(rowId[3]);
+    let rowDescription = "#row" + rowNum + "-description";
+    let rowDiv = "#row"+ rowNum + "-div";
+
+    $(rowDiv).slideUp(500, function() {
+      $(rowDescription).remove();
+    });
+  }
+  else {
     let rowId = $(this).closest('tr').attr('id');
     let rowNumber = parseInt(rowId[3]);
-    let nextRowNumber = rowNumber++;
-    let nextRow = "row" + nextRowNumber;
+    let rowDiv = "row" + rowNumber + "-div";
+    let databaseRowId = rowId + "Data";
+    let currentDescription = database[databaseRowId]["description"];
+    let currentAddress = database[databaseRowId]["address"];
     
     // Expand the row
     $(this).closest('tr').after(`
-      <tr id="row${rowNumber}-description">
+      <tr id="row${rowNumber}-description" class="description">
         <td colspan="5">
-          <div id="row${rowNumber}-div" style="display: none;">
-            <p><strong>Description: </strong>
+          <div id="${rowDiv}" style="display: none;">
+            <p><strong>Description: </strong>${currentDescription}</p>
+            <p><strong>Address: </strong>${currentAddress}</p>
+          </div>
         </td>
       </tr>
     `);
-  }
-  else {
-    console.log('false');
+    $("#"+rowDiv).slideDown();
   }
 });
-
-// $("#row1 .expander").on("click", function() {
-//   if ($(this).closest('tr').next('tr').val("id").is("#row1-description")) {
-//     // Contract the row
-//     $('#row1-div').slideUp(500, function() {
-//       $('#row1-description').remove();  
-//     }); 
-//   }
-//   else {
-//     // Expand the row
-//     $('#row1').after(`
-//       <tr id="row1-description">
-//         <td colspan="5">
-//           <div id="row1-div" style="display: none;">
-//             <p><strong>Description: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!</p>
-//             <p><strong>Address: </strong>123 Study St., City, ST 12345</p>
-//           </div>
-//         </td>
-//       </tr>
-//     `);
-//     $("#row1-div").slideDown();
-//   }
-// });
 
 // Click CREATE NEW MEETING
 $("#add-new").on("click", function() {
