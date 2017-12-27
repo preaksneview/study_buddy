@@ -30,27 +30,25 @@ const database = {
 }
 
 $(".expander").on("click", function() {
-  if ($(this).closest('tr').next('tr').val('class').is('.description')) {
-    let rowId = $(this).closest('tr').attr('id');
-    let rowNum = parseInt(rowId[3]);
-    let rowDescription = "#row" + rowNum + "-description";
-    let rowDiv = "#row"+ rowNum + "-div";
+  const rowId = $(this).closest('tr').attr('id');
+  const rowNum = parseInt(rowId[3]);
+  const rowDiv = "row" + rowNum + "-div";
 
-    $(rowDiv).slideUp(500, function() {
+  if ($(this).closest('tr').next('tr').val('class').is('.description')) {
+    const rowDescription = "#row" + rowNum + "-description";
+
+    $("#"+rowDiv).slideUp(500, function() {
       $(rowDescription).remove();
     });
   }
   else {
-    let rowId = $(this).closest('tr').attr('id');
-    let rowNumber = parseInt(rowId[3]);
-    let rowDiv = "row" + rowNumber + "-div";
-    let databaseRowId = rowId + "Data";
-    let currentDescription = database[databaseRowId]["description"];
-    let currentAddress = database[databaseRowId]["address"];
+    const databaseRowId = rowId + "Data";
+    const currentDescription = database[databaseRowId]["description"];
+    const currentAddress = database[databaseRowId]["address"];
     
     // Expand the row
     $(this).closest('tr').after(`
-      <tr id="row${rowNumber}-description" class="description">
+      <tr id="row${rowNum}-description" class="description">
         <td colspan="5">
           <div id="${rowDiv}" style="display: none;">
             <p><strong>Description: </strong>${currentDescription}</p>
@@ -59,7 +57,7 @@ $(".expander").on("click", function() {
         </td>
       </tr>
     `);
-    $("#row"+rowNumber+"-description").css('background-color',primaryLight);
+    $("#row"+rowNum+"-description").css('background-color',primaryLight);
     $("#"+rowDiv).slideDown();
   }
 });
