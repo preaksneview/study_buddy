@@ -58,6 +58,7 @@ $(".expander").on("click", function() {
       </tr>
     `);
     $("#row"+rowNum+"-description").css('background-color',primaryLight);
+    $("#row"+rowNum+"-description").children('td').css('padding','0 10px');
     $("#"+rowDiv).slideDown();
   }
 });
