@@ -2,6 +2,9 @@
  * Styling and animation for StudyBuddy
  */
 
+// Styling variables (see also _variables.scss)
+const primaryLight = "#52c7b8";
+
 // We need dummy data
 const database = {
   row1Data: {
@@ -56,6 +59,7 @@ $(".expander").on("click", function() {
         </td>
       </tr>
     `);
+    $("#row"+rowNumber+"-description").css('background-color',primaryLight);
     $("#"+rowDiv).slideDown();
   }
 });
