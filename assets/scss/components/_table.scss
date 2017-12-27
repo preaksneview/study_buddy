@@ -50,5 +50,14 @@ table {
     background-color: $secondary-light;
     color: $body-dark;
     font-family: $heading-font;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  button:hover {
+    box-shadow: 0 0px 4px 4px rgba(0,0,0,0.33);
+  }
+
+  button:active {
+    box-shadow: 0;
   }
 }
