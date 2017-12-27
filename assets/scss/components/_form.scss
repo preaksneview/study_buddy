@@ -13,7 +13,7 @@ main {
     border: 0;
     padding: 5px 10px;
     height: 3rem;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     text-align: center;
     font-size: 1.778rem;
     color: $body-light;
@@ -21,6 +21,22 @@ main {
   }
 
   #add-new:hover {
-    box-shadow: 0 0px 4px 4px rgba(0,0,0,0.33);
+    box-shadow: 0 0px 3px 3px rgba(0,0,0,0.33);
+  }
+
+  #add-new:active {
+    box-shadow: 0 0 0 0;
+  }
+
+  input[type=submit] {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  input[type=submit]:hover {
+    box-shadow: 0 0px 3px 3px rgba(0,0,0,0.33);
+  }  
+
+  input[type=submit]:active {
+    box-shadow: 0 0 0 0;
   }
 }
