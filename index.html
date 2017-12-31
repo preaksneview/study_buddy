@@ -32,6 +32,8 @@
     </table>
   </section>
 
+  <!-- Temporary addition for Calendar Testing -->
+  <!-- ----------------------------------------------------------------  -->
   <div id="create-event">
     <form>
       Event Name:<br>
@@ -46,6 +48,15 @@
       <input type="submit" id="submit-entry">
     </form>
   </div>
+
+  <p>Google Calendar API Quickstart</p>
+
+  <!--Add buttons to initiate auth sequence and sign out-->
+  <button id="authorize-button" style="display: none;">Authorize</button>
+  <button id="signout-button" style="display: none;">Sign Out</button>
+
+  <pre id="content"></pre>
+  <!-- ----------------------------------------------------------------  -->
 
   <aside id="map-section">
     <!-- map goes here -->
@@ -65,5 +76,11 @@
   <!-- <script src="./assets/js/cloud.js"></script> -->
   <script src="./assets/js/calendar.js"></script>
   <script src="./assets/js/map.js"></script>
+
+  <!-- JS link used in Calendar API -->
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </body>
 </html>
