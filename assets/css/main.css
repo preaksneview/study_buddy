@@ -375,7 +375,7 @@ header {
 table, iframe {
   width: 100%; }
 
-section {
+main {
   border-top: 1px solid #00675b;
   border-bottom: 1px solid #00675b;
   margin: 1vh 0;
@@ -527,11 +527,11 @@ table {
     box-shadow: 0 0 0 0; }
 
 /* Styling for form */
-main {
+#add-form-div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center; }
-  main #add-new {
+  #add-form-div #add-new {
     display: inline-block;
     background-color: #ff5252;
     -webkit-border-radius: 5px;
@@ -547,15 +547,15 @@ main {
     font-size: 1.778rem;
     color: rgba(255, 255, 255, 0.84);
     text-transform: uppercase; }
-  main #add-new:hover {
+  #add-form-div #add-new:hover {
     box-shadow: 0 0px 3px 3px rgba(0, 0, 0, 0.33); }
-  main #add-new:active {
+  #add-form-div #add-new:active {
     box-shadow: 0 0 0 0; }
-  main input[type=submit] {
+  #add-form-div input[type=submit] {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2); }
-  main input[type=submit]:hover {
+  #add-form-div input[type=submit]:hover {
     box-shadow: 0 0px 3px 3px rgba(0, 0, 0, 0.33); }
-  main input[type=submit]:active {
+  #add-form-div input[type=submit]:active {
     box-shadow: 0 0 0 0; }
 
 /* Styling of floating card */
