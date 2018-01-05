@@ -58,21 +58,7 @@
         <td><button class="expander">...</button></td>
       </tr>
     </table>
-    <div id="add-form-div">
-      <button type="button" name="add-new" id="add-new">Create new meeting</button>
-      <form id="add-form" class="card">
-          <label for="name">Name</label><br/>
-          <input name="name" type="text"><br/>
-          <label for="date">Date &amp; Time</label><br/>
-          <input name="date" type="date"><br/>
-          <label for="duration">Duration (in minutes)</label><br/>
-          <input name="duration" type="number"><br/>
-          <label for="address">Address</label><br/>
-          <input name="address" type="text"><br/>
-          <input type="submit" id="add-event" name="Add event">
-      </form>
-    </div>
-  </main>
+
   <aside id="map-section">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196281.1305484419!2d-104.995539234428!3d39.76451826017205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1514079015847" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </aside>
@@ -88,9 +74,14 @@
   crossorigin="anonymous"></script>
   <script 
   src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="./assets/js/style.js"></script>
-  <script src="./assets/js/cloud.js"></script>
+
   <script src="./assets/js/calendar.js"></script>
   <script src="./assets/js/map.js"></script>
+
+  <!-- JS link used in Calendar API -->
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </body>
 </html>
