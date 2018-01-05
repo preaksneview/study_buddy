@@ -6,7 +6,7 @@
 const primaryLight = "#52c7b8";
 
 // We need dummy data
-const database = {
+const database1 = {
   row1Data: {
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
     address: "123 Study St., City, ST 12345"
@@ -42,9 +42,9 @@ $(".expander").on("click", function() {
     });
   }
   else {
-    const databaseRowId = rowId + "Data";
-    const currentDescription = database[databaseRowId]["description"];
-    const currentAddress = database[databaseRowId]["address"];
+    const database1RowId = rowId + "Data";
+    const currentDescription = database1[database1RowId]["description"];
+    const currentAddress = database1[database1RowId]["address"];
     
     // Expand the row
     $(this).closest('tr').after(`
