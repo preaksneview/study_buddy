@@ -75,3 +75,9 @@ $("#add-event").on("click", function() {
   // Hide the form
   $("#add-form").slideUp(600); 
 });
+
+/*
+ * TO DO LIST
+ * 1. Add "Add to my calendar" button under expanded description
+ * 2. Add "Description" to submission form
+ */
