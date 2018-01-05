@@ -80,4 +80,5 @@ $("#add-event").on("click", function() {
  * TO DO LIST
  * 1. Style the form so text areas are bigger
  * 2. Style weather widget
+ * 3. Take data from firebase and use it to populate table
  */
