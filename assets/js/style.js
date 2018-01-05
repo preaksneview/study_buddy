@@ -80,4 +80,5 @@ $("#add-event").on("click", function() {
  * TO DO LIST
  * 1. Add "Add to my calendar" button under expanded description
  * 2. Add "Description" to submission form
+ * 3. Add weather widget display
  */
