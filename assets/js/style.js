@@ -42,9 +42,9 @@ $(".expander").on("click", function() {
     });
   }
   else {
-    const database1RowId = rowId + "Data";
-    const currentDescription = database1[database1RowId]["description"];
-    const currentAddress = database1[database1RowId]["address"];
+    const databaseRowId = rowId + "Data";
+    const currentDescription = database1[databaseRowId]["description"];
+    const currentAddress = database1[databaseRowId]["address"];
     
     // Expand the row
     $(this).closest('tr').after(`
