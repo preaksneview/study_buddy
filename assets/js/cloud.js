@@ -28,7 +28,10 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // descriptionArray.push(eventDescription);
 
   $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocation + "</td><td>" + "<button class='expander'>...</button></td>");  
+  eventDuration + "</td><td>" + eventLocation + "</td><td>" + "<button class='expander'>...</button></td>"); 
+  
+  var rowNum = $("tr:last-of-type").index();
+  $("tr:last-of-type").attr('id', "row"+rowNum);
 });
 
 // add event button
