@@ -6,28 +6,28 @@
 const primaryLight = "#52c7b8";
 
 // We need dummy data
-const database1 = {
-  row1Data: {
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
-    address: "123 Study St., City, ST 12345"
-  },
-  row2Data: {
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
-    address: "2645 Lafayette St., City, ST 12345"
-  },
-  row3Data: {
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
-    address: "757 E 20th Ave., City, ST 12345"
-  },
-  row4Data: {
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
-    address: "12477 S North St., City, ST 12345"
-  },
-  row5Data: {
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
-    address: "6969 Cool St., City, ST 1234"
-  }
-}
+// const database1 = {
+//   row1Data: {
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
+//     address: "123 Study St., City, ST 12345"
+//   },
+//   row2Data: {
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
+//     address: "2645 Lafayette St., City, ST 12345"
+//   },
+//   row3Data: {
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
+//     address: "757 E 20th Ave., City, ST 12345"
+//   },
+//   row4Data: {
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
+//     address: "12477 S North St., City, ST 12345"
+//   },
+//   row5Data: {
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
+//     address: "6969 Cool St., City, ST 1234"
+//   }
+// }
 
 $(document).on("click", ".expander", function() {
   const rowId = $(this).closest('tr').attr('id');
