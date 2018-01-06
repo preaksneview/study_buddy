@@ -22,16 +22,16 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var eventName = childSnapshot.val().name;
   var eventDate = childSnapshot.val().date;
   var eventDuration = childSnapshot.val().duration;
-  var eventLocation = childSnapshot.val().locationStreet;
-  var eventLocation = childSnapshot.val().locationCity;
-  var eventLocation = childSnapshot.val().locationState;
-  var eventLocation = childSnapshot.val().locationZip;
+  var eventLocationStreet = childSnapshot.val().locationStreet;
+  var eventLocationCity = childSnapshot.val().locationCity;
+  var eventLocationState = childSnapshot.val().locationState;
+  var eventLocationZip = childSnapshot.val().locationZip;
   var eventDescription = childSnapshot.val().description;
 
   descriptionArray.push(eventDescription);
 
   $("#meeting-table").append("<tr><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocation + "</td><td>" + "<button class='expander'>...</button></td>");  
+  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");  
 });
 
 // add event button
