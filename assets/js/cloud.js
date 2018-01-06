@@ -13,9 +13,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// An array to hold descriptions
-var descriptionArray = ["header"];
-
 // creating event to add users event to firebase
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Store everything into a variable.
@@ -28,9 +25,9 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var eventLocation = childSnapshot.val().locationZip;
   var eventDescription = childSnapshot.val().description;
 
-  descriptionArray.push(eventDescription);
+  // descriptionArray.push(eventDescription);
 
-  $("#meeting-table").append("<tr><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
+  $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
   eventDuration + "</td><td>" + eventLocation + "</td><td>" + "<button class='expander'>...</button></td>");  
 });
 

@@ -18,8 +18,8 @@ $(document).on("click", ".expander", function() {
   }
   else {
     console.log("Current row:",rowNum);
-    const currentDescription = descriptionArray[rowNum];
-
+    const currentDescription = $(this).closest('tr').attr('data-description');
+    
     // Expand the row
     $(this).closest('tr').after(`
       <tr id="row${rowNum}-description" class="description">
