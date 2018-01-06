@@ -1,0 +1,18 @@
+/* Styling for weather widget */
+#weather-section {
+
+  h2 {
+    margin: 0;
+    border: 0;
+    padding: 5px;
+    @include border-top-left-radius($border-rad);
+    @include border-top-right-radius($border-rad);
+    width: 100%;
+    background-color: $secondary-dark;
+    color: $body-light;
+  }
+
+  p {
+    margin: 5px;
+  }
+}

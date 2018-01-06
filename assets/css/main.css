@@ -394,8 +394,14 @@ main {
   border-radius: 5px;
   margin: 1vh 0; }
 
-#directions-section {
-  display: none; }
+#weather-section {
+  border-top: 1px solid #c50e29;
+  border-bottom: 1px solid #c50e29;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin: 1vh 0; }
 
 footer {
   margin: 1vh 0 0; }
@@ -430,9 +436,13 @@ footer {
     padding: 5px;
     margin: 0; }
 
-  #directions-section {
+  #weather-section {
     grid-row: 3 / 4;
-    grid-column: 3 / 4; }
+    grid-column: 3 / 4;
+    border-left: 1px solid #c50e29;
+    border-right: 1px solid #c50e29;
+    padding: 0;
+    margin: 0; }
 
   footer {
     grid-row: 4 / 5;
@@ -584,6 +594,25 @@ input {
   height: 3rem;
   text-align: center;
   color: rgba(255, 255, 255, 0.84); }
+
+/* Styling for weather widget */
+#weather-section h2 {
+  margin: 0;
+  border: 0;
+  padding: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  background-color: #c50e29;
+  color: rgba(255, 255, 255, 0.84); }
+#weather-section p {
+  margin: 5px; }
 
 /* Styling for footer */
 footer {

@@ -6,7 +6,7 @@
 const primaryLight = "#52c7b8";
 
 // We need dummy data
-const database = {
+const database1 = {
   row1Data: {
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reiciendis, quos perferendis eos est animi dicta ab repellendus earum blanditiis hic obcaecati odio debitis, cum, dignissimos magni error asperiores velit!",
     address: "123 Study St., City, ST 12345"
@@ -43,8 +43,8 @@ $(".expander").on("click", function() {
   }
   else {
     const databaseRowId = rowId + "Data";
-    const currentDescription = database[databaseRowId]["description"];
-    const currentAddress = database[databaseRowId]["address"];
+    const currentDescription = database1[databaseRowId]["description"];
+    const currentAddress = database1[databaseRowId]["address"];
     
     // Expand the row
     $(this).closest('tr').after(`
@@ -75,3 +75,10 @@ $("#add-event").on("click", function() {
   // Hide the form
   $("#add-form").slideUp(600); 
 });
+
+/*
+ * TO DO LIST
+ * 1. Style the form so text areas are bigger
+ * 2. Style weather widget
+ * 3. Take data from firebase and use it to populate table
+ */
