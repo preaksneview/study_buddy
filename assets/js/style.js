@@ -82,3 +82,11 @@ $("#add-event").on("click", function() {
  * 2. Style weather widget
  * 3. Take data from firebase and use it to populate table
  */
+
+ /*
+  * 3-day forecast:
+  * Day
+  * Temperature
+  * Conditions
+  */
+  

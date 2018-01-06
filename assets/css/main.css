@@ -561,6 +561,12 @@ table {
     box-shadow: 0 0px 3px 3px rgba(0, 0, 0, 0.33); }
   #add-form-div #add-new:active {
     box-shadow: 0 0 0 0; }
+  #add-form-div label {
+    font-weight: bold; }
+  #add-form-div input[type=text], #add-form-div [type=date], #add-form-div [type=number], #add-form-div [type=textarea] {
+    width: 66.67%; }
+  #add-form-div input[type=textarea] {
+    height: 10vh; }
   #add-form-div input[type=submit] {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2); }
   #add-form-div input[type=submit]:hover {
