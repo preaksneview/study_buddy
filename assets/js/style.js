@@ -6,7 +6,6 @@
 const primaryLight = "#52c7b8";
 
 $(document).on("click", ".expander", function() {
-  const rowId = $(this).closest('tr').attr('id');
   const rowNum = $(this).closest('tr').index();
   const rowDiv = "row" + rowNum + "-div";
 
@@ -18,18 +17,8 @@ $(document).on("click", ".expander", function() {
     });
   }
   else {
-    const databaseRowId = rowId + "Data";
-    // const currentRow = $(this).closest('tr').index();
     console.log("Current row:",rowNum);
     const currentDescription = descriptionArray[rowNum];
-    // how to get current description
-    /*
-      Select #meeting-table
-      Select closest ('tr'), find out which row it is
-      Use that index to pull the description from the array
-    */
-    // const currentAddress = database1[databaseRowId]["address"];
-
 
     // Expand the row
     $(this).closest('tr').after(`
