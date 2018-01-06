@@ -1,17 +1,32 @@
-//Variables for building query URL
-var API_key = '7669666f22479d98';
-var state = "CO";
-var city = "Denver";
+//on click return weather
+// $("#weather-button").on("click", function () {
 
-//URL to query database
-var queryURL = "https://api.wunderground.com/api/" + API_key + "/forecast/q/" + state + "/" + city + ".json";
+  //Variables for building query URL
+  const API_key = '7669666f22479d98';
+  let city = "Denver";
+  let state = "CO";
+  let queryURL = "https://api.wunderground.com/api/" + API_key + "/forecast/q/" + state + "/" + city + ".json";
 
-//AJAX call
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).done(function (response) {
+    //AJAX call
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function (response) {
 
-  //log response
-  console.log(response);
-});
+      //log response
+      console.log(response.forecast.simpleforecast);
+
+      //loop through to add data to weather table
+      for (i = 0; i < 4; i++) {
+
+        let shortResponse = response.forecast.simpleforecast.forecastday[i];
+        let day = shortResponse.date.weekday_short;
+        let tempHi = shortResponse.high.fahrenheit;
+        let tempLo = shortResponse.low.fahrenheit;
+        let icon = shortResponse.icon_url;
+
+        console.log(tempLo);
+      }
+
+    })
+// });
