@@ -6,23 +6,20 @@
 const primaryLight = "#52c7b8";
 
 $(document).on("click", ".expander", function() {
-  const rowNum = $(this).closest('tr').index();
-  const rowDiv = "row" + rowNum + "-div";
+  const rowId = $(this).closest('tr').attr('id');
+  const rowDiv = rowId + "-div";
 
   if ($(this).closest('tr').next('tr').val('class').is('.description')) {
-    const rowDescription = "#row" + rowNum + "-description";
-
     $("#"+rowDiv).slideUp(500, function() {
-      $(rowDescription).remove();
+      $("#"+rowId+"-description").remove();
     });
   }
   else {
-    console.log("Current row:",rowNum);
-    const currentDescription = descriptionArray[rowNum];
-
+    const currentDescription = $(this).closest('tr').attr('data-description');
+    
     // Expand the row
     $(this).closest('tr').after(`
-      <tr id="row${rowNum}-description" class="description">
+      <tr id="${rowId}-description" class="description">
         <td colspan="5">
           <div id="${rowDiv}" style="display: none;">
             <p><strong>Description: </strong>${currentDescription}</p>
@@ -30,8 +27,8 @@ $(document).on("click", ".expander", function() {
         </td>
       </tr>
     `);
-    $("#row"+rowNum+"-description").css('background-color',primaryLight);
-    $("#row"+rowNum+"-description").children('td').css('padding','0 10px');
+    $("#"+rowId+"-description").css('background-color',primaryLight);
+    $("#"+rowId+"-description").children('td').css('padding','0 10px');
     $("#"+rowDiv).slideDown();
   }
 });

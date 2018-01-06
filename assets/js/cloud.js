@@ -13,9 +13,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// An array to hold descriptions
-var descriptionArray = ["header"];
-
 // creating event to add users event to firebase
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Store everything into a variable.
@@ -28,10 +25,13 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var eventLocationZip = childSnapshot.val().locationZip;
   var eventDescription = childSnapshot.val().description;
 
-  descriptionArray.push(eventDescription);
+  // descriptionArray.push(eventDescription);
 
-  $("#meeting-table").append("<tr><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");  
+  $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
+  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>"); 
+  
+  var rowNum = $("tr:last-of-type").index();
+  $("tr:last-of-type").attr('id', "row"+rowNum);
 });
 
 // add event button
