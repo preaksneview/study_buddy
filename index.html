@@ -22,7 +22,7 @@
         <th>Address</th>
         <th>&nbsp;</th>
       </tr>
-      <tr id="row1" class='schedule'>
+      <!-- <tr id="row1" class='schedule'>
         <td>The Blue Barracudas</td>
         <td>Dec 23 at 1:30 pm</td>
         <td>3 hours</td>
@@ -56,7 +56,7 @@
         <td>2.5 hours</td>
         <td>6969 Cool St.</td>
         <td><button class="expander">...</button></td>
-      </tr>
+      </tr> -->
     </table>
     <div id="add-form-div">
       <button type="button" name="add-new" id="add-new">Create new meeting</button>
@@ -67,8 +67,14 @@
           <input name="date" type="date"><br/>
           <label for="duration">Duration (in minutes)</label><br/>
           <input name="duration" type="number"><br/>
-          <label for="address">Address</label><br/>
-          <input name="address" type="text"><br/>
+          <label for="street-address">Street Address</label><br/>
+          <input name="street-address" type="text"><br/>
+          <label for="city">City</label>
+          <input name="city" type="text">
+          <label for="state">State</label>
+          <input name="state" type="text">
+          <label for="zip">Zipcode</label>
+          <input name="zip" type="text"><br>
           <label for="description">Description</label><br/>
           <input name="description" type="textarea"><br/>
           <input type="submit" id="add-event" name="Add event">
