@@ -22,26 +22,29 @@
         <th>Address</th>
         <th>&nbsp;</th>
       </tr>
+      <tbody>
+     <!-- Table data will go here -->
+      </tbody>
     </table>
     <div id="add-form-div">
       <button type="button" name="add-new" id="add-new">Create new meeting</button>
       <form id="add-form" class="card">
-          <label for="name">Name</label><br/>
-          <input name="name" type="text"><br/>
+          <label for="event-name">Name</label><br/>
+          <input name="event-name" id = "event-name" type="text"><br/>
           <label for="date">Date &amp; Time</label><br/>
-          <input name="date" type="date"><br/>
+          <input name="date" id = "date" type="date"><br/>
           <label for="duration">Duration (in minutes)</label><br/>
-          <input name="duration" type="number"><br/>
+          <input name="duration" id = "duration" type="number"><br/>
           <label for="street-address">Street Address</label><br/>
-          <input name="street-address" type="text"><br/>
+          <input name="street-address" id = "street-address" type="text"><br/>
           <label for="city">City</label>
-          <input name="city" type="text">
+          <input name="city" id = "city" type="text">
           <label for="state">State</label>
-          <input name="state" type="text">
+          <input name="state" id = "state" type="text">
           <label for="zip">Zipcode</label>
-          <input name="zip" type="text"><br>
+          <input name="zip" id = "zip" type="text"><br>
           <label for="description">Description</label><br/>
-          <input name="description" type="textarea"><br/>
+          <input name="description" id = "description" type="textarea"><br/>
           <input type="submit" id="add-event" name="Add event">
       </form>
     </div>
@@ -62,11 +65,11 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  <script 
+  <script
   src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="./assets/js/cloud.js"></script>
-  <script src="./assets/js/map.js"></script>
-  <script src="./assets/js/weather.js"></script>
+  <!--<script src="./assets/js/map.js"></script>
+  <script src="./assets/js/weather.js"></script> -->
   <script src="./assets/js/style.js"></script>
 </body>
 </html>
