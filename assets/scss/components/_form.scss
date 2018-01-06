@@ -28,6 +28,18 @@
     box-shadow: 0 0 0 0;
   }
 
+  label {
+    font-weight: bold;
+  }
+
+  input[type=text], [type=date], [type=number], [type=textarea] {
+    width: 66.67%;
+  }
+
+  input[type=textarea] {
+    height: 10vh;
+  }
+
   input[type=submit] {
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
   }
