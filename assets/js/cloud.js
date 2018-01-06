@@ -43,14 +43,14 @@ $("#add-event").on("click", function(event) {
   database.ref().push(newEvent);
 
   // Logs everything to console
-  console.log(newEvent.name);
-  console.log(newEvent.date);
-  console.log(newEvent.duration);
-  console.log(newEvent.locationStreet);
-  console.log(newEvent.locationCity);
-  console.log(newEvent.locationState);
-  console.log(newEvent.locationZip);
-  console.log(newEvent.description);
+  // console.log(newEvent.name);
+  // console.log(newEvent.date);
+  // console.log(newEvent.duration);
+  // console.log(newEvent.locationStreet);
+  // console.log(newEvent.locationCity);
+  // console.log(newEvent.locationState);
+  // console.log(newEvent.locationZip);
+  // console.log(newEvent.description);
 
   // Alert
   //alert("Meeting successfully scheduled");
@@ -66,10 +66,13 @@ $("#add-event").on("click", function(event) {
   $("#description").val("");
 });
 
+// An array to hold descriptions
+var descriptionArray = ["header"];
+
 // creating event to add users event to firebase
 database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
-  console.log(childSnapshot.val());
+  // console.log(childSnapshot.val());
 
   // Store everything into a variable.
   var eventName = childSnapshot.val().name;
@@ -82,5 +85,8 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var eventDescription = childSnapshot.val().description;
 
   $("#meeting-table > tbody").append("<tr><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocation + "</td><td>" + eventDescription);
+  eventDuration + "</td><td>" + eventLocation + "</td><td>" + "<button class='expander'>...</button></td>");
+
+  descriptionArray.push(eventDescription);
+  // console.log("Event description array: " + descriptionArray);
 });

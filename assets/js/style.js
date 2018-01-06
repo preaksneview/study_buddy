@@ -29,9 +29,9 @@ const database1 = {
   }
 }
 
-$(".expander").on("click", function() {
+$(document).on("click", ".expander", function() {
   const rowId = $(this).closest('tr').attr('id');
-  const rowNum = parseInt(rowId[3]);
+  const rowNum = $(this).closest('tr').index();
   const rowDiv = "row" + rowNum + "-div";
 
   if ($(this).closest('tr').next('tr').val('class').is('.description')) {
@@ -43,16 +43,24 @@ $(".expander").on("click", function() {
   }
   else {
     const databaseRowId = rowId + "Data";
-    const currentDescription = database1[databaseRowId]["description"];
-    const currentAddress = database1[databaseRowId]["address"];
-    
+    // const currentRow = $(this).closest('tr').index();
+    console.log("Current row:",rowNum);
+    const currentDescription = descriptionArray[rowNum];
+    // how to get current description
+    /*
+      Select #meeting-table
+      Select closest ('tr'), find out which row it is
+      Use that index to pull the description from the array
+    */
+    // const currentAddress = database1[databaseRowId]["address"];
+
+
     // Expand the row
     $(this).closest('tr').after(`
       <tr id="row${rowNum}-description" class="description">
         <td colspan="5">
           <div id="${rowDiv}" style="display: none;">
             <p><strong>Description: </strong>${currentDescription}</p>
-            <p><strong>Address: </strong>${currentAddress}</p>
           </div>
         </td>
       </tr>
@@ -78,7 +86,9 @@ $("#add-event").on("click", function() {
 
  /*
   * 3-day forecast:
-  * Day
-  * Temperature
-  * Conditions
+  * Day , High , Low , conditions icon
+  * Sat , 54F , 32F , icon 
+  * Sun , 54F , 32F , icon 
+  * Mon , 54F , 32F , icon 
+  * Tue , 54F , 32F , icon
   */
