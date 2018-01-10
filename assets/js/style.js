@@ -33,7 +33,9 @@ $(document).on("click", ".expander", function() {
   }
 
   // Display weather
-  $("#weather-section").slideToggle();
+  if ($("#weather-section").css("display") === "none") {
+    $("#weather-section").slideDown();
+  }
 
 });
 
