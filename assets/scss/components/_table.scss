@@ -1,6 +1,6 @@
 /* Styling for tables */
 /* Styling for the train table */
-table {
+#meeting-table {
   text-align: left;
   // border: 1px solid $primary-light;
   @include border-bottom-left-radius($border-rad);
