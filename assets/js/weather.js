@@ -1,6 +1,8 @@
 //on click return weather
 $(document).on("click", ".expander", function () {
 
+  $("#weather-table-body").empty();
+
   //Variables for building query URL
   const API_key = '7669666f22479d98';
   let city = $(this).attr("city");
@@ -25,6 +27,9 @@ $(document).on("click", ".expander", function () {
       let tempHi = shortResponse.high.fahrenheit;
       let tempLo = shortResponse.low.fahrenheit;
       let icon = shortResponse.icon_url;
+
+      $("#weather-table-body").append("<tr><td>" + day + "</td><td>" + tempHi + "</td><td>" +
+      tempLo + "</td><td><img src='"+ icon +"'</td>");
 
       console.log(day);
     }
