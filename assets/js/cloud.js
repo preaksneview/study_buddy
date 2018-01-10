@@ -25,11 +25,14 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var eventLocationZip = childSnapshot.val().locationZip;
   var eventDescription = childSnapshot.val().description;
 
+  var prettyAddress = eventLocationStreet;
+  console.log(eventLocationStreet + " " + eventLocationCity + " " + eventLocationState + " " + eventLocationZip);
+
   // descriptionArray.push(eventDescription);
 
   $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>"); 
-  
+  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");
+
   var rowNum = $("tr:last-of-type").index();
   $("tr:last-of-type").attr('id', "row"+rowNum);
 });
@@ -47,6 +50,10 @@ $("#add-event").on("click", function(event) {
   var eventLocationState = $("#state").val().trim();
   var eventLocationZip = $("#zip").val().trim();
   var eventDescription = $("#description").val().trim();
+
+  //Make adress pretty
+  var prettyAddress = eventLocationStreet;
+  console.log(prettyAddress);
 
   // Validate that the forms are filled out
   if ($("#event-name").val().trim() === ""){
@@ -85,7 +92,7 @@ $("#add-event").on("click", function(event) {
 
   // object to hold our event info
   var newEvent = {
-    name: eventName,  
+    name: eventName,
     date: eventDate,
     duration: eventDuration,
     locationStreet: eventLocationStreet,
@@ -111,7 +118,7 @@ $("#add-event").on("click", function(event) {
   $("#zip").val("");
   $("#description").val("");
 
-  $("#add-form").slideUp(600); 
+  $("#add-form").slideUp(600);
 
   console.log(descriptionArray);
 });

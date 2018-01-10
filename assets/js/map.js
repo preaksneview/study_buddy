@@ -10,3 +10,14 @@ function initMap() {
       map: map
     });
 }
+
+var geocoder = new google.maps.Geocoder();
+geocoder.geocode( { "address": "Brussels" }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+        var location = results[0].geometry.location,
+            lat = location.lat(),
+            lng = location.lng();
+      alert("Latitude: " + lat);
+      alert("Longitude: " + lng);
+    }
+});
