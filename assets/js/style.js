@@ -31,6 +31,10 @@ $(document).on("click", ".expander", function() {
     $("#"+rowId+"-description").children('td').css('padding','0 10px');
     $("#"+rowDiv).slideDown();
   }
+
+  // Display weather
+  $("#weather-section").slideToggle();
+
 });
 
 // Click CREATE NEW MEETING
