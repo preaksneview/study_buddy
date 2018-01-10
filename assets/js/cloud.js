@@ -31,7 +31,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   descriptionArray.push(eventDescription);
 
   $("#meeting-table").append("<tr><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
-  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");  
+  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' street=" + eventLocationStreet + " city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");  
 });
 
 // add event button
