@@ -539,6 +539,8 @@ header {
   #meeting-table button:active {
     box-shadow: 0 0 0 0; }
 
+@media only screen and (max-width: 899px) {
+  font-size: 14px; }
 /* Styling for form */
 #add-form-div {
   display: flex;

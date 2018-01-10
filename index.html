@@ -17,8 +17,8 @@
       <caption>Upcoming Meetings</caption>
       <tr id="row-heading">
         <th>Name</th>
-        <th>Date & Time</th>
-        <th>Duration</th>
+        <th>Date</th>
+        <th>Time</th>
         <th>Address</th>
         <th>&nbsp;</th>
       </tr>
@@ -30,19 +30,19 @@
       <button type="button" name="add-new" id="add-new">Create new meeting</button>
       <form id="add-form" class="card">
           <label for="event-name">Name</label><br/>
-          <input name="event-name" id = "event-name" type="text" required><br/>
+          <input name="event-name" id = "event-name" type="text" placeholder="Great Study Group" required><br/>
           <label for="date">Date &amp; Time</label><br/>
           <input name="date" id = "date" type="date" required><br/>
-          <label for="duration">Duration (in minutes)</label><br/>
-          <input name="duration" id = "duration" type="number" required><br/>
+          <label for="duration">Time</label><br/>
+          <input name="duration" id = "duration" type="text" placeholder="2:00 PM - 3:30 PM" required><br/>
           <label for="street-address">Street Address</label><br/>
-          <input name="street-address" id = "street-address" type="text" required><br/>
+          <input name="street-address" id = "street-address" type="text" placeholder="123 Study Blvd." required><br/>
           <label for="city">City</label><br>
-          <input name="city" id = "city" type="text" required><br>
+          <input name="city" id = "city" type="text" placeholder="Studyton" required><br>
           <label for="state">State</label><br>
-          <input name="state" id = "state" type="text" required><br>
+          <input name="state" id = "state" type="text" placeholder="OK" required><br>
           <label for="zip">Zipcode</label><br>
-          <input name="zip" id = "zip" type="text" required><br>
+          <input name="zip" id = "zip" type="text" placeholder="12345" required><br>
           <label for="description">Description</label><br/>
           <input name="description" id = "description" type="textarea" required><br/>
           <input type="submit" id="add-event" name="Add event">
