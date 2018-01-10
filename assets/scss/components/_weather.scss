@@ -1,5 +1,6 @@
 /* Styling for weather widget */
 #weather-section {
+  display: none;
 
   h2 {
     margin: 0;
@@ -46,6 +47,11 @@
     th {
       font-family: $heading-font;
       background-color: $secondary-color;
+      color: $body-light;
+    }
+
+    #city {
+      background-color: $secondary-light;
       color: $body-light;
     }
   }

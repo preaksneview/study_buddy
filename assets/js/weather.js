@@ -19,6 +19,9 @@ $(document).on("click", ".expander", function () {
     //log response
     console.log(response.forecast.simpleforecast);
 
+    //print city name at top of table
+    $("#weather-table-body").append("<tr><td id='city' colspan='4'>"+city+"</td></tr>");
+
     //loop through to add data to weather table
     for (i = 0; i < 4; i++) {
 

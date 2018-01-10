@@ -602,35 +602,10 @@ input {
   color: rgba(255, 255, 255, 0.84); }
 
 /* Styling for weather widget */
-#weather-section h2 {
-  margin: 0;
-  border: 0;
-  padding: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  -ms-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  -ms-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-  background-color: #c50e29;
-  color: rgba(255, 255, 255, 0.84); }
-#weather-section p {
-  margin: 5px; }
-#weather-section table {
-  text-align: center;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  -ms-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  -ms-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px; }
-  #weather-section table caption {
-    display: table-caption;
+#weather-section {
+  display: none; }
+  #weather-section h2 {
+    margin: 0;
     border: 0;
     padding: 5px;
     -webkit-border-top-left-radius: 5px;
@@ -641,19 +616,49 @@ input {
     -moz-border-top-right-radius: 5px;
     -ms-border-top-right-radius: 5px;
     border-top-right-radius: 5px;
+    width: 100%;
     background-color: #c50e29;
-    color: rgba(255, 255, 255, 0.95);
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.778rem; }
-  #weather-section table tr {
-    width: 100%; }
-  #weather-section table th, #weather-section table td {
-    padding: 0.5vw 1vw;
-    height: 45px; }
-  #weather-section table th {
-    font-family: "Open Sans", sans-serif;
-    background-color: #ff5252;
     color: rgba(255, 255, 255, 0.84); }
+  #weather-section p {
+    margin: 5px; }
+  #weather-section table {
+    text-align: center;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -ms-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+    #weather-section table caption {
+      display: table-caption;
+      border: 0;
+      padding: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -moz-border-top-left-radius: 5px;
+      -ms-border-top-left-radius: 5px;
+      border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-top-right-radius: 5px;
+      -ms-border-top-right-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: #c50e29;
+      color: rgba(255, 255, 255, 0.95);
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.778rem; }
+    #weather-section table tr {
+      width: 100%; }
+    #weather-section table th, #weather-section table td {
+      padding: 0.5vw 1vw;
+      height: 45px; }
+    #weather-section table th {
+      font-family: "Open Sans", sans-serif;
+      background-color: #ff5252;
+      color: rgba(255, 255, 255, 0.84); }
+    #weather-section table #city {
+      background-color: #ff867f;
+      color: rgba(255, 255, 255, 0.84); }
 
 /* Styling for footer */
 footer {
