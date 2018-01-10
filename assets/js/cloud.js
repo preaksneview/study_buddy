@@ -48,6 +48,41 @@ $("#add-event").on("click", function(event) {
   var eventLocationZip = $("#zip").val().trim();
   var eventDescription = $("#description").val().trim();
 
+  // Validate that the forms are filled out
+  if ($("#event-name").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#date").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#duration").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#street-address").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#city").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#state").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#zip").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+  if ($("#description").val().trim() === ""){
+    $("#add-form").append("<strong>All fields are required.</strong>");
+    return false;
+  }
+
+
   // object to hold our event info
   var newEvent = {
     name: eventName,  
