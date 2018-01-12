@@ -1,5 +1,3 @@
-
-
 //Initialize Firebase
 var config = {
   apiKey: "AIzaSyAwSszrGJ-J62xrI0PRBRjypSoHFmtmQho",
@@ -11,10 +9,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
-  var database = firebase.database();
+var database = firebase.database();
 
-  // creating event to add users event to firebase
-  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+// creating event to add users event to firebase
+database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   // Store everything into a variable.
   var eventName = childSnapshot.val().name;
   var eventDate = childSnapshot.val().date;
@@ -25,20 +23,24 @@ firebase.initializeApp(config);
   var eventLocationZip = childSnapshot.val().locationZip;
   var eventDescription = childSnapshot.val().description;
 
+  //change spaces to dashes for storage as data attribute
+  var eventLocationStreetString = eventLocationStreet.replace(/\s/g, "-");
+  var eventLocationCityString = eventLocationCity.replace(/\s/g, "-");
+
   // descriptionArray.push(eventDescription);
 
   //Put the data into the table on the app
-  $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
+  $("#meeting-table").append("<tr data-description='" + eventDescription + "'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
 
-  eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' street=" + eventLocationStreet + " city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>"); 
-  
+    eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' street=" + eventLocationStreetString + " city=" + eventLocationCityString + " state=" + eventLocationState + ">...</button></td>");
+
   var rowNum = $("tr:last-of-type").index();
-  $("tr:last-of-type").attr('id', "row"+rowNum);
+  $("tr:last-of-type").attr('id', "row" + rowNum);
 
 });
 
-  // button to create a new meeting
-  $("#add-event").on("click", function(event) {
+// button to create a new meeting
+$("#add-event").on("click", function (event) {
   event.preventDefault();
 
   // get user input to put into object
@@ -52,35 +54,35 @@ firebase.initializeApp(config);
   var eventDescription = $("#description").val().trim();
 
   // Validate that the forms are filled out
-  if ($("#event-name").val().trim() === ""){
+  if ($("#event-name").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#date").val().trim() === ""){
+  if ($("#date").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#duration").val().trim() === ""){
+  if ($("#duration").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#street-address").val().trim() === ""){
+  if ($("#street-address").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#city").val().trim() === ""){
+  if ($("#city").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#state").val().trim() === ""){
+  if ($("#state").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#zip").val().trim() === ""){
+  if ($("#zip").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }
-  if ($("#description").val().trim() === ""){
+  if ($("#description").val().trim() === "") {
     $("#add-form").append("<strong>All fields are required.</strong>");
     return false;
   }

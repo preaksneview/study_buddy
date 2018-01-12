@@ -11,10 +11,13 @@ function initMap() {
 $(document).on("click", ".expander", function () {
 
     //set pull variables from table
-    let mapStreetAddress = $(this).attr("street");
-    let mapCityAddress = $(this).attr("city");
+    let mapStreetAddressString = $(this).attr("street");
+    let mapCityAddressString = $(this).attr("city");
     let mapStateAddress = $(this).attr("state");
-    console.log(mapStreetAddress);
+
+    //replace dashes with spaces for API to use
+    let mapStreetAddress = mapStreetAddressString.replace("-", /\s/g);
+    let mapCityAddress = mapCityAddressString.replace("-", /\s/g);
 
     var queryURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + mapStreetAddress + ',' + mapCityAddress + ',' + mapStateAddress + '&key=AIzaSyBlgTkKRyGfGoEPtxLX-IfB31voIkAOOIY';
 
