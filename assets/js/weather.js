@@ -9,18 +9,19 @@ $(document).on("click", ".expander", function () {
   let state = $(this).attr("state");
   let queryURL = "https://api.wunderground.com/api/" + API_key + "/forecast/q/" + state + "/" + city + ".json";
 
-  console.log(state);
   // AJAX call
   $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function (response) {
 
+
     //log response
     console.log(response.forecast.simpleforecast);
 
     //print city name at top of table
     $("#weather-table-body").append("<tr><td id='city' colspan='4'>"+city+"</td></tr>");
+
 
     //loop through to add data to weather table
     for (i = 0; i < 4; i++) {
@@ -33,8 +34,6 @@ $(document).on("click", ".expander", function () {
 
       $("#weather-table-body").append("<tr><td>" + day + "</td><td>" + tempHi + "</td><td>" +
       tempLo + "</td><td><img src='"+ icon +"'</td>");
-
-      console.log(day);
     }
 
   })
