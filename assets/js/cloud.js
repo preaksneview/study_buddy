@@ -89,7 +89,6 @@ $("#add-event").on("click", function (event) {
     return false;
   }
 
-
   // object to hold our event info
   var newEvent = {
     name: eventName,
