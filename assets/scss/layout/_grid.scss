@@ -34,6 +34,8 @@ main {
   border-bottom: 1px solid $secondary-dark;
   @include border-radius($border-rad);
   margin: 1vh 0;
+  width: 100%;
+  min-height: 400px;
 }
 
 #weather-section {
@@ -96,3 +98,4 @@ footer {
     margin: 0;
   }
 }
+

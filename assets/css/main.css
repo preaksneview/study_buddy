@@ -392,7 +392,9 @@ main {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  margin: 1vh 0; }
+  margin: 1vh 0;
+  width: 100%;
+  min-height: 400px; }
 
 #weather-section {
   border-top: 1px solid #c50e29;
@@ -475,7 +477,8 @@ header {
   width: 100%;
   padding: 2vh; }
   header h1 {
-    color: rgba(255, 255, 255, 0.95); }
+    color: rgba(255, 255, 255, 0.95);
+    margin-left: 2.5vw; }
 
 /* Styling for tables */
 /* Styling for the train table */
@@ -536,6 +539,8 @@ header {
   #meeting-table button:active {
     box-shadow: 0 0 0 0; }
 
+@media only screen and (max-width: 899px) {
+  font-size: 14px; }
 /* Styling for form */
 #add-form-div {
   display: flex;
@@ -554,7 +559,7 @@ header {
     height: 3rem;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
     text-align: center;
-    font-size: 1.778rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.84);
     text-transform: uppercase; }
   #add-form-div #add-new:hover {
@@ -667,4 +672,6 @@ footer {
   text-align: center;
   padding: 2vh; }
 
+
 /*# sourceMappingURL=main.css.map */
+

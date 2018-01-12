@@ -1,4 +1,5 @@
 function initMap(pin) {
+
     // var uluru = {lat: -25.363, lng: 131.044};
     var pinDrop = pin
     var map = new google.maps.Map(document.getElementById('map-section'), {
@@ -30,3 +31,4 @@ $(document).on("click", ".expander", function () {
       initMap(pinDrop);
     })
   });
+

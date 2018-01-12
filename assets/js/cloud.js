@@ -11,10 +11,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var database = firebase.database();
+  var database = firebase.database();
 
-// creating event to add users event to firebase
-database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+  // creating event to add users event to firebase
+  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Store everything into a variable.
   var eventName = childSnapshot.val().name;
   var eventDate = childSnapshot.val().date;
@@ -27,15 +27,18 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
   // descriptionArray.push(eventDescription);
 
+  //Put the data into the table on the app
   $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
+
   eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' street=" + eventLocationStreet + " city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>"); 
   
   var rowNum = $("tr:last-of-type").index();
   $("tr:last-of-type").attr('id', "row"+rowNum);
+
 });
 
-// add event button
-$("#add-event").on("click", function(event) {
+  // button to create a new meeting
+  $("#add-event").on("click", function(event) {
   event.preventDefault();
 
   // get user input to put into object
@@ -85,7 +88,7 @@ $("#add-event").on("click", function(event) {
 
   // object to hold our event info
   var newEvent = {
-    name: eventName,  
+    name: eventName,
     date: eventDate,
     duration: eventDuration,
     locationStreet: eventLocationStreet,
@@ -98,9 +101,6 @@ $("#add-event").on("click", function(event) {
   // Uploads event to database
   database.ref().push(newEvent);
 
-  // Alert
-  //alert("Meeting successfully scheduled");
-
   // Clears all of the text-boxes
   $("#event-name").val("");
   $("#date").val("");
@@ -111,7 +111,7 @@ $("#add-event").on("click", function(event) {
   $("#zip").val("");
   $("#description").val("");
 
-  $("#add-form").slideUp(600); 
+  $("#add-form").slideUp(600);
 
   console.log(descriptionArray);
 });
