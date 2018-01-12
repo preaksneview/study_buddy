@@ -1,15 +1,9 @@
-function initMap(pin) {
-
-    // var uluru = {lat: -25.363, lng: 131.044};
-    var pinDrop = pin
-    var map = new google.maps.Map(document.getElementById('map-section'), {
-      zoom: 10,
-      center: pinDrop
-    });
-    var marker = new google.maps.Marker({
-      position: pinDrop,
-      map: map
-    });
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map-section'), {
+    center: {lat: 39.7392, lng: -104.991},
+    zoom: 8
+  });
 }
   
 $(document).on("click", ".expander", function () {
@@ -28,7 +22,20 @@ $(document).on("click", ".expander", function () {
   
       let pinDrop = response.results[0].geometry.location;
   
-      initMap(pinDrop);
+      function initMap(pin) {
+
+        // var uluru = {lat: -25.363, lng: 131.044};
+        var pinDrop = pin
+        var map = new google.maps.Map(document.getElementById('map-section'), {
+          zoom: 12,
+          center: pinDrop
+        });
+        var marker = new google.maps.Marker({
+          position: pinDrop,
+          map: map
+        });
+      }  
+        initMap(pinDrop);
     })
   });
 
