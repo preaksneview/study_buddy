@@ -476,10 +476,10 @@ small {
 header {
   background-color: #009688;
   width: 100%;
-  padding: 2vh; }
+  padding: 2vh 0 2vh 1vw; }
   header h1 {
     color: rgba(255, 255, 255, 0.95);
-    margin: 1vh 0vw 1vh 2.5vw; }
+    margin: 1vh 0vw 1vh 1vw; }
 
 /* Styling for tables */
 /* Styling for the train table */
@@ -518,7 +518,7 @@ header {
     display: none;
     background-color: #52c7b8; }
   #meeting-table th, #meeting-table td {
-    padding: 2vw;
+    padding: 2vh 2vw;
     height: 45px; }
   #meeting-table th {
     font-family: "Open Sans", sans-serif;
