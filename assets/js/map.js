@@ -3,7 +3,7 @@ function initMap(pin) {
     // var uluru = {lat: -25.363, lng: 131.044};
     var pinDrop = pin
     var map = new google.maps.Map(document.getElementById('map-section'), {
-      zoom: 4,
+      zoom: 10,
       center: pinDrop
     });
     var marker = new google.maps.Marker({
