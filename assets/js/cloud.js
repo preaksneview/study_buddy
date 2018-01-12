@@ -30,11 +30,9 @@ database.ref().on("child_added", function (childSnapshot, prevChildKey) {
   // descriptionArray.push(eventDescription);
 
   var prettyAddress = eventLocationStreet + " " + eventLocationCity + " " + eventLocationState + " " + eventLocationZip;
-  console.log(prettAddress);
-
 
   //Put the data into the table on the app
-  $("#meeting-table").append("<tr data-description='" + eventDescription + "'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
+  $("#meeting-table").append("<tr data-description='" + eventDescription + "' data-fulladdress='"+prettyAddress+"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
 
     eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' street=" + eventLocationStreetString + " city=" + eventLocationCityString + " state=" + eventLocationState + ">...</button></td>");
 

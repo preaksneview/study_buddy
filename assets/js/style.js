@@ -16,6 +16,7 @@ $(document).on("click", ".expander", function() {
   }
   else {
     const currentDescription = $(this).closest('tr').attr('data-description');
+    const currentAddress = $(this).closest('tr').attr('data-fulladdress');
     
     // Expand the row
     $(this).closest('tr').after(`
@@ -23,6 +24,7 @@ $(document).on("click", ".expander", function() {
         <td colspan="5">
           <div id="${rowDiv}" style="display: none;">
             <p><strong>Description: </strong>${currentDescription}</p>
+            <p><strong>Address: </strong>${currentAddress}</p>
           </div>
         </td>
       </tr>
