@@ -1,6 +1,5 @@
-function initMap() {
-  var uluru = { lat: -25.363, lng: 131.044 };
-  var pinLocation = uluru;
+function initMap(pin) {
+  var pinLocation = pin;
     var map = new google.maps.Map(document.getElementById('map-section'), {
       zoom: 10,
       center: pinLocation
@@ -11,10 +10,14 @@ function initMap() {
   });
 }
 
+let denverLocation = { lat: 39.7392, lng: 104.9903 };
+initMap(denverLocation);
+
 $(document).on("click", ".expander", function () {
-  let mapStreetAddress = "4321 Broadway";
-  let mapCityAddress = "Denver";
-  let mapStateAddress = "CO";
+
+  let mapStreetAddress = $(this).attr("street");
+  let mapCityAddress = $(this).attr("city");
+  let mapStateAddress = $(this).attr("state");
 
   var queryURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + mapStreetAddress + ',' + mapCityAddress + ',' + mapStateAddress + '&key=AIzaSyBlgTkKRyGfGoEPtxLX-IfB31voIkAOOIY';
 
@@ -23,5 +26,9 @@ $(document).on("click", ".expander", function () {
     method: "GET"
   }).done(function (response) {
     console.log(response.results[0].geometry.location);
+
+    let pinDrop = response.results[0].geometry.location;
+
+    initMap(pinDrop);
   })
 });
