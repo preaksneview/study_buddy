@@ -415,7 +415,7 @@ footer {
     margin: 0;
     display: grid;
     grid-gap: 2vw;
-    grid-template-rows: 150px 1fr auto 50px;
+    grid-template-rows: 100px 1fr auto 50px;
     grid-template-columns: 20px 2fr 1fr 20px; }
 
   header {
@@ -479,7 +479,7 @@ header {
   padding: 2vh; }
   header h1 {
     color: rgba(255, 255, 255, 0.95);
-    margin-left: 2.5vw; }
+    margin: 1vh 0vw 1vh 2.5vw; }
 
 /* Styling for tables */
 /* Styling for the train table */
