@@ -26,12 +26,14 @@ firebase.initializeApp(config);
   var eventDescription = childSnapshot.val().description;
 
   // descriptionArray.push(eventDescription);
+
   //Put the data into the table on the app
   $("#meeting-table").append("<tr data-description='" + eventDescription +"'><td>" + eventName + "</td><td>" + eventDate + "</td><td>" +
   eventDuration + "</td><td>" + eventLocationStreet + "</td><td>" + "<button class='expander' city=" + eventLocationCity + " state=" + eventLocationState + ">...</button></td>");
 
   var rowNum = $("tr:last-of-type").index();
   $("tr:last-of-type").attr('id', "row"+rowNum);
+
 });
 
   // button to create a new meeting
