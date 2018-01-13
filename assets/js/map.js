@@ -16,8 +16,8 @@ $(document).on("click", ".expander", function () {
     let mapStateAddress = $(this).attr("state");
 
     //replace dashes with spaces for API to use
-    let mapStreetAddress = mapStreetAddressString.replace("-", /\s/g);
-    let mapCityAddress = mapCityAddressString.replace("-", /\s/g);
+    let mapStreetAddress = mapStreetAddressString.replace("-", " ");
+    let mapCityAddress = mapCityAddressString.replace("-", " ");
 
     var queryURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + mapStreetAddress + ',' + mapCityAddress + ',' + mapStateAddress + '&key=AIzaSyBlgTkKRyGfGoEPtxLX-IfB31voIkAOOIY';
 
