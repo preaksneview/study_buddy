@@ -5,8 +5,12 @@ $(document).on("click", ".expander", function () {
 
   //Variables for building query URL
   const API_key = '7669666f22479d98';
-  let city = $(this).attr("city");
+  let cityString = $(this).attr("city");
   let state = $(this).attr("state");
+
+  //replace dashes with spaces for API to use
+  let city = cityString.replace("-", " ");
+
   let queryURL = "https://api.wunderground.com/api/" + API_key + "/forecast/q/" + state + "/" + city + ".json";
 
   // AJAX call
@@ -15,9 +19,8 @@ $(document).on("click", ".expander", function () {
     method: "GET"
   }).done(function (response) {
 
-
     //log response
-    console.log(response.forecast.simpleforecast);
+    // console.log(response.forecast.simpleforecast);
 
     //print city name at top of table
     $("#weather-table-body").append("<tr><td id='city' colspan='4'>"+city+"</td></tr>");
