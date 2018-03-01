@@ -1,11 +1,11 @@
 //Initialize Firebase
 var config = {
-  apiKey: "AIzaSyAwSszrGJ-J62xrI0PRBRjypSoHFmtmQho",
-  authDomain: "test-7f362.firebaseapp.com",
-  databaseURL: "https://test-7f362.firebaseio.com",
-  projectId: "test-7f362",
-  storageBucket: "test-7f362.appspot.com",
-  messagingSenderId: "1011145892760"
+  apiKey: "AIzaSyBJZvVH9uhCJVKjLZKED_YjUQtTv3ZOzZg",
+  authDomain: "study-buddy-1.firebaseapp.com",
+  databaseURL: "https://study-buddy-1.firebaseio.com",
+  projectId: "study-buddy-1",
+  storageBucket: "study-buddy-1.appspot.com",
+  messagingSenderId: "242196700602"
 };
 firebase.initializeApp(config);
 
